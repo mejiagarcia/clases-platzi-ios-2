@@ -12,6 +12,13 @@ class ViewController: UIViewController {
     // MARK: - Referencia de la tabla
     @IBOutlet weak var tableView: UITableView!
     
+    private var dataSource = [
+        "@carlosmejia083",
+        "@cvander",
+        "@freddier",
+        "@platzi"
+    ]
+    
     /*
      1. Implementar DataSource <- interfaz
      */
@@ -21,7 +28,8 @@ class ViewController: UIViewController {
         
         // No olvidar!! :)
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "mi-celda")
+        tableView.register(UINib(nibName: "TweetTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "TweetTableViewCell")
         
         // Para interactuar, implementar el delegate
         tableView.delegate = self
@@ -40,15 +48,18 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UITableViewDataSource {
     // 1. Número de filas que tendrá nuestra tabla
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return dataSource.count
     }
     
     // 2. Método para saber que celdas deben mostrarse.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mi-celda", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetTableViewCell",
+                                                 for: indexPath)
         
-        cell.textLabel?.text = "Soy la celda #\(indexPath.row)"
+        if let newCell = cell as? TweetTableViewCell {
+            newCell.setupCell(username: dataSource[indexPath.row], message: "Soy un tweet!")
+        }
         
         return cell
     }

@@ -13,6 +13,8 @@
 		2C73BA0B23D6597C00154720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C73BA0923D6597C00154720 /* Main.storyboard */; };
 		2C73BA0D23D6597D00154720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C73BA0C23D6597D00154720 /* Assets.xcassets */; };
 		2C73BA1023D6597D00154720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C73BA0E23D6597D00154720 /* LaunchScreen.storyboard */; };
+		2C73BA1A23D660D400154720 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73BA1823D660D400154720 /* TweetTableViewCell.swift */; };
+		2C73BA1B23D660D400154720 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C73BA1923D660D400154720 /* TweetTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2C73BA0C23D6597D00154720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C73BA0F23D6597D00154720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C73BA1123D6597D00154720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C73BA1823D660D400154720 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		2C73BA1923D660D400154720 /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		2C73BA0223D6597C00154720 /* AprendiendoTablas */ = {
 			isa = PBXGroup;
 			children = (
+				2C73BA1723D660A600154720 /* Cells */,
 				2C73BA0323D6597C00154720 /* AppDelegate.swift */,
 				2C73BA0523D6597C00154720 /* SceneDelegate.swift */,
 				2C73BA0723D6597C00154720 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				2C73BA1123D6597D00154720 /* Info.plist */,
 			);
 			path = AprendiendoTablas;
+			sourceTree = "<group>";
+		};
+		2C73BA1723D660A600154720 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2C73BA1823D660D400154720 /* TweetTableViewCell.swift */,
+				2C73BA1923D660D400154720 /* TweetTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +142,7 @@
 				2C73BA1023D6597D00154720 /* LaunchScreen.storyboard in Resources */,
 				2C73BA0D23D6597D00154720 /* Assets.xcassets in Resources */,
 				2C73BA0B23D6597C00154720 /* Main.storyboard in Resources */,
+				2C73BA1B23D660D400154720 /* TweetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +156,7 @@
 				2C73BA0823D6597C00154720 /* ViewController.swift in Sources */,
 				2C73BA0423D6597C00154720 /* AppDelegate.swift in Sources */,
 				2C73BA0623D6597C00154720 /* SceneDelegate.swift in Sources */,
+				2C73BA1A23D660D400154720 /* TweetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
